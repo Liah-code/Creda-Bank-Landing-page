@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/Creda Logo 1.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              tablet: "800px",
+              xxlScreen: "1280px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="/style.css" />
+    <title>Creda - Banking Made Easy</title>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="w-full flex justify-between items-center px-6 lg:px-14 border border-b-1 py-5 border-b-[var(--Foundation-brand-brand-100)] fixed top-0 bg-white"
+      >
+        <div class="img">
+          <img src="/images/Creda Logo 1.svg" alt="Creda Logo" />
+        </div>
+
+        <!------------------- Desktop View --------------------------->
+
+        <ul class="md:flex gap-8 hidden">
+          <li>
+            <a
+              href="#"
+              class="text-[var(--Foundation-Neutral-neutral-500)] font-normal text-sm hover:border-b-2 hover:border-b-[var(--Foundation-brand-brand-100)] hover:px-1 hover:rounded-xl transition-all duration-300 cursor-pointer"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[var(--Foundation-Neutral-neutral-500)] font-normal text-sm hover:border-b-2 hover:border-b-[var(--Foundation-brand-brand-100)] hover:px-1 hover:rounded-xl transition-all duration-300 cursor-pointer"
+              >How it works</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[var(--Foundation-Neutral-neutral-500)] font-normal text-sm hover:border-b-2 hover:border-b-[var(--Foundation-brand-brand-100)] hover:px-1 hover:rounded-xl transition-all duration-300 cursor-pointer"
+              >Benefits</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[var(--Foundation-Neutral-neutral-500)] font-normal text-sm hover:border-b-2 hover:border-b-[var(--Foundation-brand-brand-100)] hover:px-1 hover:rounded-xl transition-all duration-300 cursor-pointer"
+              >FAQs</a
+            >
+          </li>
+        </ul>
+
+        <div class="hidden md:flex gap-5">
+          <button
+            class="border border-[var(--Foundation-brand-brand-700)] px-3 py-1 rounded-xl text-[var(--Foundation-brand-brand-700)]"
+          >
+            Sign in
+          </button>
+          <button
+            class="bg-[var(--Foundation-brand-brand-700)] px-2 py-2 rounded-xl text-[var(--Foundation-brand-brand-50)]"
+          >
+            Join Creda
+          </button>
+        </div>
+        <button
+          id="menu-btn"
+          class="md:hidden text-gray-700 focus:outline-none"
+        >
+          <!-- Hamburger icon -->
+          <svg
+            id="menu-icon"
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </nav>
+      <!-------------------- Mobile View ------------------------>
+
+      <!-- Mobile Menu (hidden by default) -->
+      <div
+        id="menu"
+        class="hidden md:hidden fixed top-14 right-0 w-full bg-white shadow-md transition-all duration-500 ease-in-out z-50"
+      >
+        <ul class="flex flex-col space-y-2 py-4 px-5">
+          <li>
+            <a
+              href="#"
+              class="text-[var(--Foundation-Neutral-neutral-500)] font-normal text-sm cursor-pointer hover:bg-[var(--Foundation-brand-brand-100)] hover:px-10 hover:rounded-xl transition-all duration-300"
+              >Features</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[var(--Foundation-Neutral-neutral-500)] font-normal text-sm cursor-pointer hover:bg-[var(--Foundation-brand-brand-100)] hover:px-10 hover:rounded-xl transition-all duration-300"
+              >How it works</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[var(--Foundation-Neutral-neutral-500)] font-normal text-sm cursor-pointer hover:bg-[var(--Foundation-brand-brand-100)] hover:px-10 hover:rounded-xl transition-all duration-300"
+              >Benefits</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-[var(--Foundation-Neutral-neutral-500)] font-normal text-sm cursor-pointer hover:bg-[var(--Foundation-brand-brand-100)] hover:px-10 hover:rounded-xl transition-all duration-300"
+              >FAQs</a
+            >
+          </li>
+        </ul>
+
+        <div class="md:hidden flex flex-col gap-5 p-4">
+          <button
+            class="border border-[var(--Foundation-brand-brand-700)] px-3 py-1 rounded-xl text-[var(--Foundation-brand-brand-700)]"
+          >
+            Sign in
+          </button>
+          <button
+            class="bg-[var(--Foundation-brand-brand-700)] px-2 py-2 rounded-xl text-[var(--Foundation-brand-brand-50)]"
+          >
+            Join Creda
+          </button>
+        </div>
+      </div>
+
+      <!--------------------------------Header Content------------------------------------->
+      <div
+        class="md:flex gap-5 bg-[linear-gradient(157deg,#FAF6FB_58.96%,rgba(236,160,247,0.60)_98.76%)] pt-10 px-6 pt-[100px] md:pt-[150px] h-auto lg:h-screen tablet:h-auto"
+      >
+        <div class="md:mx-10 tablet:ms-10 tablet:mx-0 tablet:w-screen w-full">
+          <h1
+            class="text-3xl md:text-[41.879px] xxlScreen:text-[5xl] leading-[46px] font-semibold mb-6 text-[var(--Foundation-Neutral-neutral-500)]"
+          >
+            Transfer Money <br class="hidden md:block" />
+            Your Way — With <br class="hidden md:block" />
+            a
+            <span class="text-[var(--Foundation-brand-brand-700)]"
+              >Creda Tag</span
+            >
+            or <br class="hidden md:block xxlScreen:block tablet:hidden" />
+            Account Number.
+          </h1>
+          <p
+            class="text-[14.358px] text-[var(--Foundation-Neutral-neutral-500)]"
+          >
+            Send money seamlessly by account, IBAN, or your <br />
+            personal Creda Tag. You're always in control.
+          </p>
+          <div class="md:flex md:gap-5 items-center mt-8 tablet:mb-8">
+            <button
+              class="bg-[var(--Foundation-brand-brand-700)] text-[var(--Foundation-brand-brand-50)] py-2 px-3 rounded-xl mb-2 md:mb-0"
+            >
+              Get Creda Tag
+            </button>
+            <div class="flex items-center gap-1">
+              <p class="text-[var(--Foundation-brand-brand-700)]">
+                Learn more about sending money
+              </p>
+              <a href="#">
+                <img src="/images/ArrowCircleUpRight.svg" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="tablet:w-[650px]">
+          <img src="/images/iphone15.png" alt="" />
+        </div>
+      </div>
+    </header>
+    <!------------------------------Two Way Section-------------------------------------->
+    <section
+      class="mt-14 flex flex-col items-center lg:gap-0 lg:mx-0 mx-4 gap-5"
+    >
+      <div class="w-[408.615px] text-center">
+        <h2
+          class="text-2xl font-semibold text-[var(--Foundation-Neutral-neutral-600)] mb-2"
+        >
+          It's A Two Way Thing
+        </h2>
+        <p class="text-[var(--Foundation-Neutral-neutral-500)] text-[14.358px]">
+          Creda gives you the freedom to send money your way, with flexible
+          options that adapt to your preferences.
+        </p>
+      </div>
+      <div
+        class="lg:flex lg:justify-around w-full text-[var(--Foundation-Neutral-neutral-500)] mt-8"
+      >
+        <div
+          class="lg:border lg:border-2 lg:border-[var(--Foundation-Neutral-neutral-50)] lg:w-[450px] w-full rounded-xl p-[14.958px]"
+        >
+          <div
+            class="bg-[var(--Foundation-Neutral-neutral-50)] w-8 h-8 flex items-center justify-center rounded-full p-1"
+          >
+            <img src="/images/Hash.svg" alt="" />
+          </div>
+          <h2 class="text-xl font-semibold mt-4">Traditional Transfer</h2>
+          <p class="mt-2 text-sm text-[var(--Foundation-Neutral-neutral-500)]">
+            Continue sending money the way you always have, using account
+            numbers. No change required.
+          </p>
+
+          <div class="flex gap-3 mt-2">
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border-2 border-[var(--Foundation-Neutral-neutral-300)] mb-2"
+            >
+              <div
+                class="w-3 h-3 rounded-full bg-[var(--Foundation-Neutral-neutral-300)]"
+              ></div>
+            </div>
+
+            <p>Use account number</p>
+          </div>
+          <div class="flex gap-3 mt-2">
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border-2 border-[var(--Foundation-Neutral-neutral-300)] mb-2"
+            >
+              <div
+                class="w-3 h-3 rounded-full bg-[var(--Foundation-Neutral-neutral-300)]"
+              ></div>
+            </div>
+
+            <p>IBAN for International</p>
+          </div>
+          <div class="flex gap-3 mt-2">
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border-2 border-[var(--Foundation-Neutral-neutral-300)] mb-2"
+            >
+              <div
+                class="w-3 h-3 rounded-full bg-[var(--Foundation-Neutral-neutral-300)]"
+              ></div>
+            </div>
+
+            <p>Fast and reliable</p>
+          </div>
+          <button
+            class="lg:w-full bg-[var(--Foundation-Neutral-neutral-50)] p-2 rounded-xl mt-4 font-semibold"
+          >
+            Learn More
+          </button>
+        </div>
+
+        <!---------------------------Creda Tag Transfer---------------------------------->
+        <div
+          class="rounded-xl p-[14.958px] bg-[var(--Foundation-brand-brand-50)] lg:w-[450px] w-full"
+        >
+          <img src="/images/At.svg" class="w-8 h-8" alt="" />
+          <h2 class="mt-4 text-xl font-semibold">Creda Tag Transfer</h2>
+          <p class="mt-2 text-sm text-[var(--Foundation-Neutral-neutral-500)]">
+            Create your unique @username attached to your email and share it
+            with fellow Creda tag users. Simple, memorable, and fast.
+          </p>
+
+          <div class="flex gap-3 mt-2">
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border-2 border-[var(--Foundation-Neutral-neutral-300)] mb-2"
+            >
+              <div
+                class="w-3 h-3 rounded-full bg-[var(--Foundation-Neutral-neutral-300)]"
+              ></div>
+            </div>
+
+            <p>Personalized username linked to email</p>
+          </div>
+          <div class="flex gap-3 mt-2">
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border-2 border-[var(--Foundation-Neutral-neutral-300)] mb-2"
+            >
+              <div
+                class="w-3 h-3 rounded-full bg-[var(--Foundation-Neutral-neutral-300)]"
+              ></div>
+            </div>
+
+            <p>Easy to remember</p>
+          </div>
+          <div class="flex gap-3 mt-2">
+            <div
+              class="w-6 h-6 flex items-center justify-center rounded-full border-2 border-[var(--Foundation-Neutral-neutral-300)] mb-2"
+            >
+              <div
+                class="w-3 h-3 rounded-full bg-[var(--Foundation-Neutral-neutral-300)]"
+              ></div>
+            </div>
+
+            <p>Fast and reliable</p>
+          </div>
+          <button
+            class="lg:w-full bg-[var(--Foundation-brand-brand-100)] p-2 rounded-xl mt-4 font-semibold"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-------------------------How Creda Works------------------------------->
+    <section
+      class="bg-[var(--Foundation-brand-brand-50)] flex flex-col gap-5 justify-between items-center lg:mt-14 mt-4"
+    >
+      <div class="text-center">
+        <h2
+          class="text-lg font-semibold text-[var(--Foundation-Neutral-neutral-600)] text-center pt-10"
+        >
+          How Creda tag works
+        </h2>
+        <p class="text-md text-[var(--Foundation-Neutral-neutral-500)] mt-4">
+          Three simple steps to make your money transfers easier than ever
+        </p>
+      </div>
+      <div
+        class="lg:grid lg:grid-cols-3 lg:gap-5 lg:mx-24 lg:my-8 flex flex-col mx-4 gap-5"
+      >
+        <div class="bg-white p-6 rounded-xl">
+          <div
+            class="how-it-works-img bg-[var(--Foundation-brand-brand-50)] w-6 h-6 rounded-full flex items-center justify-center"
+          >
+            <img src="/images/User.svg" alt="" />
+          </div>
+          <h4
+            class="font-semibold text-[var(--Foundation-brand-brand-700)] mt-4"
+          >
+            Create You Tag
+          </h4>
+          <p class="mt-2 text-[var(--Foundation-Neutral-neutral-500)]">
+            Sign in to your Creda app and create a unique name using your email
+            address which becomes your Creda Tag.
+          </p>
+        </div>
+        <div class="bg-white p-6 rounded-xl">
+          <div
+            class="how-it-works-img bg-[var(--Foundation-brand-brand-50)] w-6 h-6 rounded-full flex items-center justify-center"
+          >
+            <img src="/images/At.svg" class="w-4 h-4" alt="" />
+          </div>
+          <h4
+            class="font-semibold text-[var(--Foundation-brand-brand-700)] mt-4"
+          >
+            Share You Tag
+          </h4>
+          <p class="mt-2 text-[var(--Foundation-Neutral-neutral-500)]">
+            Let friends and family know your Creda Tag for hassle-free
+            transfers. You can search other recipients via their tag too.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-xl">
+          <div
+            class="how-it-works-img bg-[var(--Foundation-brand-brand-50)] w-6 h-6 rounded-full flex items-center justify-center"
+          >
+            <img src="/images/ArrowsLeftRight.svg" alt="" />
+          </div>
+          <h4
+            class="font-semibold text-[var(--Foundation-brand-brand-700)] mt-4"
+          >
+            Send & Receive Instantly
+          </h4>
+          <p class="mt-2 text-[var(--Foundation-Neutral-neutral-500)]">
+            Funds arrive in your account immediately, no matter how they're
+            sent.
+          </p>
+        </div>
+      </div>
+      <div
+        class="border-l-[var(--Foundation-brand-brand-700)] border-l-2 rounded-md flex gap-3 lg:px-4 px-2 mx-6 lg:self-baseline lg:mx-24 mb-8 w-auto"
+      >
+        <img src="/images/Info.svg" alt="" />
+        <p class="text-[var(--Foundation-brand-brand-900)] text-xs lg:text-sm">
+          Creda Tag is completely optional, you can choose to use the normal
+          way.
+        </p>
+      </div>
+    </section>
+    <!-------------------------Why Use Creda--------------------------------->
+    <section
+      class="flex flex-col gap-5 justify-between items-center mt-14 lg:mx-10"
+    >
+      <div class="text-center">
+        <h2
+          class="text-2xl font-semibold text-[var(--Foundation-Neutral-neutral-600)] text-center pt-10"
+        >
+          Why use
+          <span
+            class="bg-gradient-to-r from-[#9A32AA] via-[#B944C4] to-[#C64DD8] bg-clip-text text-transparent"
+            >Creda tag</span
+          >
+        </h2>
+        <p class="text-md text-[var(--Foundation-Neutral-neutral-500)] mt-4">
+          Three simple steps to make your money transfers easier than ever
+        </p>
+      </div>
+      <div
+        class="lg:grid lg:grid-cols-4 lg:gap-5 lg:mx-6 lg:mt-12 lg:mb-14 flex flex-col mx-4 gap-5"
+      >
+        <div
+          class="bg-white p-6 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)]"
+        >
+          <div
+            class="how-it-works-img bg-[var(--Foundation-brand-brand-50)] w-10 h-10 rounded-full flex items-center justify-center"
+          >
+            <img src="/images/Bank.svg" alt="" />
+          </div>
+          <h4
+            class="font-semibold text-xl text-[var(--Foundation-brand-brand-800)] mt-4"
+          >
+            No Bank Details Needed
+          </h4>
+          <p class="mt-2 text-[var(--Foundation-Neutral-neutral-400)]">
+            Transfer money without sharing sensitive account numbers or
+            information.
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)]"
+        >
+          <div
+            class="how-it-works-img bg-[var(--Foundation-brand-brand-50)] w-10 h-10 rounded-full flex items-center justify-center"
+          >
+            <img src="/images/GlobeHemisphereWest.svg" alt="" />
+          </div>
+          <h4
+            class="font-semibold text-xl text-[var(--Foundation-brand-brand-800)] mt-4"
+          >
+            Fast Global Transfers
+          </h4>
+          <p class="mt-2 text-[var(--Foundation-Neutral-neutral-400)]">
+            Send money internationally with just a tag, no complicated SWIFT
+            codes.
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)]"
+        >
+          <div
+            class="how-it-works-img bg-[var(--Foundation-brand-brand-50)] w-10 h-10 rounded-full flex items-center justify-center"
+          >
+            <img src="/images/User.svg" alt="" />
+          </div>
+          <h4
+            class="font-semibold text-xl text-[var(--Foundation-brand-brand-800)] mt-4"
+          >
+            Personalized Experience
+          </h4>
+          <p class="mt-2 text-[var(--Foundation-Neutral-neutral-400)]">
+            Transfer money without sharing sensitive account numbers or
+            information.
+          </p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)]"
+        >
+          <div
+            class="how-it-works-img bg-[var(--Foundation-brand-brand-50)] w-10 h-10 rounded-full flex items-center justify-center"
+          >
+            <img src="/images/ShieldCheck.svg" alt="" />
+          </div>
+          <h4
+            class="font-semibold text-xl text-[var(--Foundation-brand-brand-800)] mt-4"
+          >
+            Private & Secure
+          </h4>
+          <p class="mt-2 text-[var(--Foundation-Neutral-neutral-400)]">
+            All Creda Tag transfers use bank-level encryption and security
+            protocols to protect your money.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-------------------More to offer----------------------->
+    <section class="flex flex-col gap-5 justify-between items-center mt-14">
+      <div class="text-center">
+        <h2
+          class="text-2xl font-semibold text-[var(--Foundation-Neutral-neutral-600)] text-center pt-10"
+        >
+          More to offer
+        </h2>
+        <p class="text-md text-[var(--Foundation-Neutral-neutral-500)] mt-4">
+          Explore through our range of services.
+        </p>
+      </div>
+      <div
+        class="lg:grid lg:grid-cols-3 lg:gap-5 lg:mx-6 lg:mt-12 lg:mb-14 flex flex-col lg:px-10 gap-5 px-4"
+      >
+        <div
+          class="bg-white p-6 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)]"
+        >
+          <div
+            class="bg-[var(--Foundation-brand-brand-50)] w-10 h-10 rounded-full flex items-center justify-center"
+          >
+            <img src="/images/DeviceMobileCamera.svg" class="w-6 h-6" alt="" />
+          </div>
+          <h4
+            class="font-semibold text-xl text-[var(--Foundation-brand-brand-800)] mt-4"
+          >
+            Bills & Mobile top up
+          </h4>
+          <p class="mt-2 text-[var(--Foundation-Neutral-neutral-400)]">
+            Send money for free to any Nigerian account with 25 free transfers
+            every month.
+          </p>
+          <div class="flex gap-1 items-center mt-6">
+            <p class="text-[var(--Foundation-brand-brand-700)]">
+              <a href="#" class="underline">Learn More </a>
+            </p>
+            <img src="/images/ArrowCircleRight.svg" class="w-5 h-5" alt="" />
+          </div>
+        </div>
+        <div
+          class="bg-white p-6 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)]"
+        >
+          <div
+            class="bg-[var(--Foundation-brand-brand-50)] w-10 h-10 rounded-full flex items-center justify-center"
+          >
+            <img src="/images/PaperPlaneRight.svg" class="w-6 h-6" alt="" />
+          </div>
+          <h4
+            class="font-semibold text-xl text-[var(--Foundation-brand-brand-800)] mt-4"
+          >
+            Transfer & spend
+          </h4>
+          <p class="mt-2 text-[var(--Foundation-Neutral-neutral-400)]">
+            Send money quickly and securely to anywhere in the world using
+            traditional methods or via creda tag.
+          </p>
+          <div class="flex gap-1 items-center mt-6">
+            <p class="text-[var(--Foundation-brand-brand-700)]">
+              <a href="#" class="underline">Learn More </a>
+            </p>
+            <img src="/images/ArrowCircleRight.svg" class="w-5 h-5" alt="" />
+          </div>
+        </div>
+        <div
+          class="bg-white p-6 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.05)]"
+        >
+          <div
+            class="bg-[var(--Foundation-brand-brand-50)] w-10 h-10 rounded-full flex items-center justify-center"
+          >
+            <img src="/images/PiggyBank.svg" class="w-6 h-6" alt="" />
+          </div>
+          <h4
+            class="font-semibold text-xl text-[var(--Foundation-brand-brand-800)] mt-4"
+          >
+            Saving & Investments
+          </h4>
+          <p class="mt-2 text-[var(--Foundation-Neutral-neutral-400)]">
+            Send money for free to any Nigerian account with 25 free transfers
+            every month.
+          </p>
+          <div class="flex gap-1 items-center mt-6">
+            <p class="text-[var(--Foundation-brand-brand-700)]">
+              <a href="#" class="underline">Learn More </a>
+            </p>
+            <img src="/images/ArrowCircleRight.svg" class="w-5 h-5" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------------Money Transfer----------------------->
+    <section
+      class="bg-gradient-to-r from-[#C64DD8] to-[#9A32AA] mx-4 lg:mx-16 my-8 rounded-xl pt-10 lg:px-14 px-6 flex gap-10 flex-col lg:flex-row"
+    >
+      <div class="lg:w-[65%] lg:pe-[380px]">
+        <h2
+          class="text-[var(--Foundation-brand-brand-50)] text-2xl font-semibold mb-2 leading-normal"
+        >
+          Money Transfer has gotten a whole lot fun.
+        </h2>
+        <p class="text-xs text-[var(--Foundation-brand-brand-50)] mb-2">
+          Download our mobile app to experience financial services like never
+          before.
+        </p>
+        <button
+          class="bg-[var(--Foundation-brand-brand-50)] text-[var(--Foundation-brand-brand-700)] py-2 px-3 font-semibold text-sm rounded-xl mb-6"
+        >
+          Join Creda
+        </button>
+        <h5 class="text-[var(--Foundation-brand-brand-50)]">Available on</h5>
+        <div class="flex gap-3 mt-2">
+          <button><img src="/images/App Store 英文 黑色.svg" alt="" /></button>
+          <button>
+            <img src="/images/Google Play 英文 黑色.svg" alt="" />
+          </button>
+        </div>
+      </div>
+      <div class="flex items-end">
+        <img
+          src="/images/iPhone 13 & 14 - 15.png"
+          class="hidden lg:block"
+          alt=""
+        />
+      </div>
+    </section>
+    <!----------------------------FAQs-------------------------------->
+    <section class="bg-[var(--Foundation-brand-brand-50)] p-14">
+      <div class="text-center">
+        <h4
+          class="text-[var(--Foundation-Neutral-neutral-600)] text-2xl font-semibold mb-2"
+        >
+          Frequently Asked Questions
+        </h4>
+        <p class="text-sm text-[var(--Foundation-Neutral-neutral-400)] mb-2">
+          Everything you need to know about Creda.
+        </p>
+      </div>
+      <div class="mt-10 lg:mx-[250px] flex flex-col gap-2">
+        <button
+          class="bg-[var(--Foundation-white-Light)] flex justify-between px-4 py-2 rounded-lg text-sm"
+        >
+          <p class="text-[var(--Foundation-Neutral-neutral-700)]">
+            Is Creda Tag Mandatory ?
+          </p>
+          <img src="/images/CaretCircleDown.svg" alt="" />
+        </button>
+        <button
+          class="bg-[var(--Foundation-white-Light)] flex justify-between px-4 py-2 rounded-lg text-sm"
+        >
+          <p class="text-[var(--Foundation-Neutral-neutral-700)]">
+            Can I send Money to a recipient who doesn't have a Creda Tag ?
+          </p>
+          <img src="/images/CaretCircleDown.svg" alt="" />
+        </button>
+        <button
+          class="bg-[var(--Foundation-white-Light)] flex justify-between px-4 py-2 rounded-lg text-sm"
+        >
+          <p class="text-[var(--Foundation-Neutral-neutral-700)]">
+            Is Creda Tag Safe and Secure ?
+          </p>
+          <img src="/images/CaretCircleDown.svg" alt="" />
+        </button>
+        <button
+          class="bg-[var(--Foundation-white-Light)] flex justify-between px-4 py-2 rounded-lg text-sm"
+        >
+          <p class="text-[var(--Foundation-Neutral-neutral-700)]">
+            Are there any fees for using Creda Tag ?
+          </p>
+          <img src="/images/CaretCircleDown.svg" alt="" />
+        </button>
+        <button
+          class="bg-[var(--Foundation-white-Light)] flex justify-between px-4 py-2 rounded-lg text-sm"
+        >
+          <p class="text-[var(--Foundation-Neutral-neutral-700)]">
+            Can I still use account number ?
+          </p>
+          <img src="/images/CaretCircleDown.svg" alt="" />
+        </button>
+        <button
+          class="bg-[var(--Foundation-white-Light)] flex justify-between px-4 py-2 rounded-lg text-sm"
+        >
+          <p class="text-[var(--Foundation-Neutral-neutral-700)]">
+            Can I change my Tag later ?
+          </p>
+          <img src="/images/CaretCircleDown.svg" alt="" />
+        </button>
+      </div>
+    </section>
+    <!----------------------------Make Payments Section---------------------------->
+    <section
+      class="flex flex-col items-center justify-center gap-8 bg-[var(--Foundation-brand-brand-700)] h-[60vh] px-4"
+    >
+      <h2
+        class="text-[var(--Foundation-brand-brand-50)] text-center text-3xl font-semibold"
+      >
+        Make payments easier with your Creda Tag
+      </h2>
+      <p class="text-center text-[var(--Foundation-brand-brand-50)] lg:text-md">
+        Join thousands of users who are simplifying their financial transactions
+        with <br class="hidden lg:block" />
+        personalized Creda Tags. Create yours today and experience the
+        difference.
+      </p>
+      <div class="flex flex-col lg:flex-row gap-3 items-center">
+        <button
+          class="bg-[var(--Foundation-brand-brand-50)] text-[var(--Foundation-brand-brand-700)] text-sm px-4 py-2 rounded-xl"
+        >
+          Create My Creda Tag Now
+        </button>
+        <p class="text-[var(--Foundation-brand-brand-50)] text-sm">or</p>
+        <button class="text-[var(--Foundation-brand-brand-50)] text-sm">
+          Continue sending money traditionally
+        </button>
+      </div>
+    </section>
+    <!--------------------Contact Section--------------------------->
+    <section class="">
+      <div
+        class="mt-10 grid grid-cols-2 gap-8 lg:gap-5 content-center lg:flex lg:justify-between mx-16 border-b-2 border-b-[var(--Foundation-Neutral-neutral-200)] pb-10"
+      >
+        <div class="">
+          <img src="/images/Creda Logo 1.svg" alt="" />
+
+          <p
+            class="text-[var(--Foundation-Neutral-neutral-600)] lg:text-sm text-[13px]"
+          >
+            Redefining financial transfers with <br class="hidden lg:block" />
+            flexible, user-centric solutions.
+          </p>
+        </div>
+        <div class="">
+          <h4 class="text-[var(--Foundation-Neutral-neutral-800)]">Product</h4>
+          <ul
+            class="text-sm text-[var(--Foundation-Neutral-neutral-600)] flex flex-col gap-1"
+          >
+            <li><a href="#">Features</a></li>
+            <li><a href="#">How it works</a></li>
+            <li><a href="#">Benefits</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="text-[var(--Foundation-Neutral-neutral-800)]">Company</h4>
+          <ul
+            class="text-sm text-[var(--Foundation-Neutral-neutral-600)] flex flex-col gap-1"
+          >
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div class="">
+          <h4 class="text-[var(--Foundation-Neutral-neutral-800)]">Resource</h4>
+          <ul
+            class="text-sm text-[var(--Foundation-Neutral-neutral-600)] flex flex-col gap-1"
+          >
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+        <div class="flex lg:flex-col items-center md:gap-3 lg:gap-0">
+          <h4 class="text-[var(--Foundation-Neutral-neutral-800)] mb-2">
+            Get the app
+          </h4>
+          <div
+            class="flex lg:flex-col flex-row items-center lg:items-start lg:gap-0 gap-2"
+          >
+            <img src="images/App Store 英文 黑色.svg" class="lg:mb-2" alt="" />
+            <img src="/images/Google Play 英文 黑色.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------Footer--------------------->
+    <footer
+      class="flex flex-wrap flex-col lg:flex-row justify-between items-center px-16 my-4 overflow-hidden"
+    >
+      <p class="text-sm text-[var(--Foundation-Neutral-neutral-400)]">
+        © 2025 Creda Inc. All Rights Reserved
+      </p>
+      <div class="flex space-x-4 mt-2 md:mt-0">
+        <img src="/images/FacebookLogo.svg" alt="Facebook" class="w-5 h-5" />
+        <img src="/images/InstagramLogo.svg" alt="Instagram" class="w-5 h-5" />
+        <img src="/images/XLogo.svg" alt="X/Twitter" class="w-5 h-5" />
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

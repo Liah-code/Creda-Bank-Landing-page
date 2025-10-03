@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+body{
+    font-family: "Geist", sans-serif;
+}
+:root{
+    --light-purple-bg:#9A32AA;
+    --error-msg:#D42620;
+    --Foundation-brand-brand-50:#FBEDFD;
+    --Foundation-brand-brand-100: #F3C6FA;
+    --Foundation-white-Light: #FFF;
+    --Foundation-brand-brand-700: #9A32AA;
+    --Foundation-brand-brand-800: #772783;
+    --Foundation-brand-brand-900: #5B1D64;
+    --header-content:linear-gradient(157deg, #FAF6FB 58.96%, rgba(236, 160, 247, 0.60) 98.76%); --Foundation-Neutral-neutral-800: #2A2A2A;
+    --Foundation-Neutral-neutral-700: #373737;
+    --Foundation-Neutral-neutral-500: #4D4D4D;
+    --Foundation-Neutral-neutral-600: #464646;
+    --Foundation-Neutral-neutral-200: #ADADAD;
+    --Foundation-Neutral-neutral-300: #888;
+    --Foundation-Neutral-neutral-400: #717171;
+    --Foundation-Neutral-neutral-50: #EDEDED
+}
